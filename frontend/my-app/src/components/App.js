@@ -1,23 +1,22 @@
-import UserList from "./UserList";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Friends from "./Friends";
+import MyFridge from "./MyFridge";
+import NavBar from "./NavBar";
 import Home from "./Home";
-import NotFound from "./NotFound";
-import AlimentList from "./AlimentList";
+import {Route, Routes} from "react-router-dom";
 
-function App() {
-  return (
-    <div>
-      <p>Menu</p>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/users" element={<UserList />} />
-          <Route path="/users/:id/aliments" element={<AlimentList />} />
-          <Route path="*" element={<NotFound />} />
+function App(){
+    return (
+       <>
+       <NavBar/>
+       <div className="container"> 
+       <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/Friends" element={<Friends />}/> 
+        <Route path="/MyFridge" element={<MyFridge />}/>
         </Routes>
-      </BrowserRouter>
-    </div>
-  );
+       </div>
+       </>
+    )
 }
 
 export default App;

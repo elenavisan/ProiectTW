@@ -2,7 +2,7 @@ let express = require('express')
 let bodyParser = require('body-parser')
 let cors = require('cors')
 const routerAliment = require('./routes/aliments')
-const routerUser = require('./routes/userss')
+const routerUser = require('./routes/users')
 require("dotenv").config();
 
 const sequelize = require('./sequelize');

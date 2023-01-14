@@ -25,7 +25,7 @@ router.route('/getAliment/:id').get(checkId, async (req, res) => {
     }
 })
 
-router.route('/getAliments').get(async (req, res) => {
+/*router.route('/getAliments').get(async (req, res) => {
     const {simplified} = req.query;
     const {pIsDone} = req.query; //DE MODIFICAT
     try {
@@ -39,7 +39,7 @@ router.route('/getAliments').get(async (req, res) => {
         res.status(500).json(error);
     }
 })
-
+*/
 router.route('/addAliment').post(async (req, res) => {
     try {
         const newAliment = await Aliment.create(req.body) 
@@ -54,7 +54,7 @@ router.route('/users/:userId/aliment').post(async (req, res) => {
     try {
         const user = await User.findByPk(req.params.userId)
         if (user){
-            const newAliment = new Task(req.body) 
+            const newAliment = new Aliment(req.body) 
             newTask.UserId = user.id;
             await newAliment.save();
             res.status(200).json({"message": "Aliment added!"})

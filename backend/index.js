@@ -1,4 +1,4 @@
-const url = "http://localhost:8080/api"
+/*const url = "http://localhost:8080/api"
 
 async function get(url){
     return (await axios.get(url)).data
@@ -73,4 +73,12 @@ contact.onclick = function(){
     document.getElementById("about").style.display = "none"
     document.getElementById("contact").style.display = "block"
     document.getElementById("tasks").style.display = "none"
-}
+}*/
+var http = require("http");
+
+// create a server object
+http.createServer(function(req, res){
+    res.write("Hello world!");
+    res.end();
+})
+    .listen(8080);

@@ -9,20 +9,19 @@ const Aliment = sequelize.define(
             primaryKey: true,
             autoIncrement: true
         },
-        title: {
+        nume:{
             type: DataTypes.STRING
         },
-        expirationDate:{
-            type: DataTypes.DATE
-        },
-        category: {
+
+        categorie:{
             type: DataTypes.ENUM,
             allowNull: false,
-            values: ["LACTATE", "CARNE","DULCIURI",
-            "PREPARATE","FRUCTE","LEGUME"]
+            values: ['LACTAT', 'FRUCT', 'LEGUMA', 'CARNE']
         },
-        disponibility: {
-            type:DataTypes.BOOLEAN
+
+        dataExpirare:{
+            type:DataTypes.DATE,
+            allowNull:false
         }
     },
     {
