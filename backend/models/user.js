@@ -9,13 +9,13 @@ const User = sequelize.define(
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        email:{
             type: DataTypes.STRING
         },
-        status: {
-            type: DataTypes.ENUM,
-            allowNull: false,
-            values: ['ACTIVE', 'INACTIVE', 'FREEZED']
+
+        password:{
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
