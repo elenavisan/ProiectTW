@@ -55,7 +55,7 @@ router.route('/users/:userId/aliment').post(async (req, res) => {
         const user = await User.findByPk(req.params.userId)
         if (user){
             const newAliment = new Aliment(req.body) 
-            newTask.UserId = user.id;
+            newAliment.UserId = user.id;
             await newAliment.save();
             res.status(200).json({"message": "Aliment added!"})
         } else {
@@ -67,7 +67,7 @@ router.route('/users/:userId/aliment').post(async (req, res) => {
     }
 })
 
-router.route('/user/:userId/aliment').get(async (req, res) => {
+router.route('/user/:userId/aliments').get(async (req, res) => {
     try {
         const user = await User.findByPk(req.params.userId, {
             include: [Aliment]

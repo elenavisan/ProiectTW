@@ -1,5 +1,7 @@
 *{
     box-sizing:border-box;
+    font-family: Georgia, serif,"Gill Sans", sans-serif,
+  sans-serif,serif,cursive,system-ui;
 }
 body{
     margin:0;

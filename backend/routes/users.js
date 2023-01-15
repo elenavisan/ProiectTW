@@ -9,7 +9,6 @@ User.belongsToMany(User, { through: "Relationships", as:"Prieteni", foreignKey:"
 
 router.route('/getUsers').get(async (req, res) => {
     const {simplified} = req.query;
-    const {pIsDone} = req.query;
     try {
         const users = await User.findAll();
         res.status(200).json(users);

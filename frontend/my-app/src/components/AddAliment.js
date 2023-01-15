@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import "./fridge.css";
  
 //import { useHistory } from "react-router-dom";
 const SERVER = 'http://localhost:8080/api'
@@ -56,6 +57,7 @@ const {name, category,expirationDate} = aliment;
             <input
               type="text"
               className="form-control form-control-lg"
+              
               placeholder="Enter Aliment Name"
               name="name"
               value={name}
@@ -67,6 +69,7 @@ const {name, category,expirationDate} = aliment;
               type="text"
               className="form-control form-control-lg"
               placeholder="Enter Expiration Date"
+             
               name="expirationDate"
               value={expirationDate}
               onChange={(e) => onInputChange(e)}
@@ -74,6 +77,7 @@ const {name, category,expirationDate} = aliment;
           </div>
           <div className="form-group">
           <select 
+          id="selector"
           type="text"
           className="form-control file-selector-button"
            placeholder="Select Aliment Category"
@@ -85,7 +89,7 @@ const {name, category,expirationDate} = aliment;
                     }
                 </select>
           </div>          
-          <button className="btn btn-primary btn-block" onClick={onAdd} >Add Aliment</button>
+          <button id="butonAdd" className="btn btn-primary btn-block" onClick={onAdd} >Add Aliment</button>
         </form>
       </div>
     </div>

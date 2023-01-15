@@ -349,7 +349,7 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
+  margin: 5px;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -649,7 +649,7 @@ progress {
 }
 @media (min-width: 768px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    max-width: 800px;
   }
 }
 @media (min-width: 992px) {
@@ -1993,6 +1993,7 @@ progress {
 
 .form-control {
   display: block;
+  align-items:center;
   width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
@@ -2125,12 +2126,27 @@ progress {
   -webkit-margin-end: 0.5rem;
   margin-inline-end: 0.5rem;
 }
-
+#butonAdd{
+  min-height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  margin:5px;
+}
+#selector{
+  min-height: calc(1.5em + 1rem + 2px);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  margin:5px;
+  font-size:1rem;
+}
 .form-control-lg {
   min-height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
+  margin:5px;
 }
 .form-control-lg::-webkit-file-upload-button {
   padding: 0.5rem 1rem;
@@ -2143,6 +2159,7 @@ progress {
   margin: -0.5rem -1rem;
   -webkit-margin-end: 1rem;
   margin-inline-end: 1rem;
+  align-self: center;
 }
 
 textarea.form-control {
@@ -2545,6 +2562,7 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   width: 1%;
   min-width: 0;
+
 }
 .input-group > .form-control:focus,
 .input-group > .form-select:focus,
